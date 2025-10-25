@@ -1,0 +1,292 @@
+.contactContainer {
+    min-height: 100vh;
+    background-color: #000;
+    color: white;
+    padding: 4rem 1rem;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .gridOverlay {
+    position: absolute;
+    inset: 0;
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0wIDYwTDYwIDBIMHY2MHoiIGZpbGw9IiMxMjEyMTIiLz48L2c+PC9zdmc+');
+    opacity: 0.05;
+  }
+  
+  .contentWrapper {
+    max-width: 72rem;
+    margin: 0 auto;
+    position: relative;
+    z-index: 10;
+  }
+  
+  .heading {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 4rem;
+    text-align: center;
+    background: linear-gradient(to right, #60a5fa, #22d3ee);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  
+  .contactGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  
+  @media (min-width: 1024px) {
+    .contactGrid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  
+  .infoSection {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+  
+  .sectionTitle {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    color: #22d3ee;
+    border-left: 4px solid #22d3ee;
+    padding-left: 1rem;
+  }
+  
+  .contactItems {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .contactItem {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    transition: transform 0.3s ease;
+  }
+  
+  .contactItem:hover {
+    transform: translateX(0.5rem);
+  }
+  
+  .iconContainer {
+    background-color: rgba(30, 58, 138, 0.3);
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .contactItem:hover .iconContainer {
+    background-color: rgba(30, 58, 138, 0.5);
+  }
+  
+  .icon {
+    color: #22d3ee;
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+  
+  .contactLabel {
+    font-size: 1.25rem;
+    color: #d1d5db;
+    margin-bottom: 0.25rem;
+  }
+  
+  .contactValue {
+    color: #22d3ee;
+    text-decoration: none;
+  }
+  
+  .contactValue:hover {
+    text-decoration: underline;
+  }
+  
+  .socialLinks {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .socialIcon {
+    background-color: rgba(30, 58, 138, 0.3);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+    color: #22d3ee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .telegramIcon {
+    color: #22d3ee;
+  }
+  .socialIcon:hover {
+    transform: scale(1.1);
+    background-color: rgba(30, 58, 138, 0.5);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  }
+  
+  .socialIcon svg {
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+  
+  .formContainer {
+    background-color: rgba(17, 24, 39, 0.4);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    border-radius: 0.75rem;
+    padding: 2rem;
+    border: 1px solid rgba(31, 41, 55, 0.5);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .formContainer::before {
+    content: '';
+    position: absolute;
+    inset: 0 0 auto 0;
+    height: 1px;
+    background: linear-gradient(to right, transparent, #22d3ee, transparent);
+  }
+  
+  .formContainer::after {
+    content: '';
+    position: absolute;
+    inset: 0 0 0 auto;
+    width: 1px;
+    background: linear-gradient(to bottom, transparent, #3b82f6, transparent);
+  }
+  
+  .formFields {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .formLabel {
+    display: block;
+    color: #d1d5db;
+    margin-bottom: 0.5rem;
+    transition: color 0.3s ease;
+  }
+  
+  .formInput,
+  .formTextarea {
+    width: 100%;
+    background-color: rgba(31, 41, 55, 0.5);
+    border: 1px solid #374151;
+    border-radius: 0.5rem;
+    padding: 0.75rem 1rem;
+    color: white;
+    transition: all 0.3s ease;
+  }
+  
+  .formInput:focus,
+  .formTextarea:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #22d3ee;
+    border-color: transparent;
+  }
+  
+  .formTextarea {
+    resize: vertical;
+  }
+  
+  .submitButton {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background: linear-gradient(to right, #3b82f6, #22d3ee);
+    color: white;
+    font-weight: 500;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    border: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    margin-top: 1rem;
+  }
+  
+  .submitButton:hover:not(:disabled) {
+    background: linear-gradient(to right, #2563eb, #06b6d4);
+    box-shadow: 0 10px 15px -3px rgba(59, 130, 246, 0.2);
+  }
+  
+  .submitButton:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+  }
+  
+  .sendIcon {
+    height: 1.25rem;
+    width: 1.25rem;
+    margin-right: 0.5rem;
+    transition: transform 0.3s ease;
+  }
+  
+  .submitButton:hover .sendIcon {
+    transform: translateX(0.25rem);
+  }
+  
+  .spinner {
+    animation: spin 1s linear infinite;
+    height: 1.25rem;
+    width: 1.25rem;
+    border: 2px solid white;
+    border-top-color: transparent;
+    border-radius: 50%;
+    margin-right: 0.5rem;
+  }
+  
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .successMessage {
+    margin-top: 1rem;
+    background-color: rgba(6, 78, 59, 0.3);
+    border: 1px solid rgba(5, 150, 105, 0.5);
+    color: #a7f3d0;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    animation: fadeIn 0.5s ease;
+  }
+  
+  .checkIcon {
+    height: 1.25rem;
+    width: 1.25rem;
+    color: #10b981;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(0.5rem);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }

@@ -1,0 +1,444 @@
+/* === Header Core Styles - Enhanced Version === */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 299px;
+    z-index: 9997;
+    background: linear-gradient(145deg, #010914, #07011d); 
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid rgba(48, 6, 72, 0.715);
+    box-shadow: 0 0 30px rgba(245, 2, 2, 0.977);
+    transition: all 0.4s ease;
+}
+
+.headerContent {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 0;
+}
+
+/* Enhanced Profile Section */
+.profile {
+    text-align: center;
+    padding: 0;
+    position: relative;
+    background: rgba(0, 0, 0, 0.15);
+    border-bottom: 1px solid rgba(49, 3, 3, 0.05);
+    overflow: hidden;
+}
+
+.profileBackground {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 120px;
+    background: linear-gradient(135deg, #149ddd 0%, #11517a 100%);
+    background-size: 400% 400%;
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
+    z-index: 0;
+    animation: gradientFlow 15s ease infinite;
+}
+
+.profileBackground::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ffffff' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+    opacity: 0.5;
+}
+
+.profileContent {
+    position: relative;
+    z-index: 1;
+    padding: 35px 0 15px;
+}
+
+.profileImg {
+    margin: 0 auto;
+    display: block;
+    width: 130px;
+    height: 130px;
+    border: 6px solid rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    animation: profileEntrance 1.2s cubic-bezier(0.17, 0.67, 0.83, 0.67);
+    transition: all 0.5s cubic-bezier(0.17, 0.67, 0.83, 0.67);
+    position: relative;
+}
+
+.profileImg::after {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    border-radius: 50%;
+    border: 1px solid rgba(20, 157, 221, 0.5);
+    animation: pulse 2s infinite;
+}
+
+.profileImg:hover {
+    transform: translateY(-7px) scale(1.05);
+    border-color: #149ddd;
+    box-shadow: 0 20px 30px rgba(20, 157, 221, 0.35);
+}
+
+.name {
+    font-size: 26px;
+    margin: 20px 0 5px;
+    padding: 0;
+    font-weight: 700;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    animation: fadeInUp 0.8s ease 0.3s both;
+}
+
+.name a {
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.4s ease;
+    background: linear-gradient(90deg, #fff, #149ddd, #0d6efd);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.name a:hover {
+    background-position: right center;
+    letter-spacing: 0.5px;
+}
+
+/* Enhanced Desktop Navigation */
+.desktopNav {
+    margin: 0;
+    padding: 15px 15px;
+    animation: fadeIn 1s ease 0.7s both;
+}
+
+.desktopNav ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 8px;
+}
+
+.desktopNav .navLink {
+    display: flex;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.75);
+    padding: 12px 18px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.4s ease;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    letter-spacing: 0.3px;
+}
+
+.desktopNav .navLink::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(to bottom, #149ddd, #0d6efd);
+    transition: all 0.3s ease;
+    opacity: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.desktopNav .navLink::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(20, 157, 221, 0.12), rgba(20, 157, 221, 0.03));
+    z-index: -1;
+    transform: translateX(-100%);
+    transition: transform 0.4s ease;
+}
+
+.desktopNav .navLink:hover, 
+.desktopNav .navLink.active {
+    color: #fff;
+}
+
+.desktopNav .navLink:hover::before,
+.desktopNav .navLink.active::before {
+    opacity: 1;
+}
+
+.desktopNav .navLink:hover::after,
+.desktopNav .navLink.active::after {
+    transform: translateX(0);
+}
+
+.desktopNav .navLink i {
+    margin-right: 12px;
+    font-size: 18px;
+    width: 24px;
+    text-align: center;
+    transition: all 0.4s ease;
+    color: #149ddd;
+    filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.2));
+}
+
+.desktopNav .navLink:hover i,
+.desktopNav .navLink.active i {
+    transform: translateY(-2px);
+    color: #0d6efd;
+}
+
+.desktopNav .navLink span {
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.desktopNav .navLink:hover span {
+    transform: translateX(3px);
+}
+
+/* Animate each nav item with delay - advanced staggering */
+.desktopNav ul li {
+    transform: translateX(-30px);
+    opacity: 0;
+    animation: slideInNavItem 0.5s ease forwards;
+}
+
+.desktopNav ul li:nth-child(1) { animation-delay: 0.7s; }
+.desktopNav ul li:nth-child(2) { animation-delay: 0.8s; }
+.desktopNav ul li:nth-child(3) { animation-delay: 0.9s; }
+.desktopNav ul li:nth-child(4) { animation-delay: 1.0s; }
+.desktopNav ul li:nth-child(5) { animation-delay: 1.1s; }
+.desktopNav ul li:nth-child(6) { animation-delay: 1.2s; }
+.desktopNav ul li:nth-child(7) { animation-delay: 1.3s; }
+
+/* === Enhanced Mobile Header === */
+.mobileHeader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9997;
+    background: linear-gradient(to right, #040b14, #0a1c33);
+    padding: 12px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.25);
+    height: 75px;
+    transition: all 0.4s cubic-bezier(0.17, 0.67, 0.83, 0.67);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Header visibility classes for scroll behavior */
+.headerVisible {
+    transform: translateY(0);
+}
+
+.headerHidden {
+    transform: translateY(-100%);
+}
+
+.mobileLogo {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    animation: fadeInLeft 0.8s ease;
+}
+
+.mobileLogoImg {
+    border: 3px solid rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: all 0.4s ease;
+}
+
+.mobileLogoImg:hover {
+    transform: scale(1.1) rotate(5deg);
+    border-color: #149ddd;
+    box-shadow: 0 8px 15px rgba(20, 157, 221, 0.35);
+}
+
+.mobileTitle {
+    font-size: 22px;
+    font-weight: 700;
+    color: #fff;
+    margin: 0;
+    transition: all 0.3s ease;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.mobileTitle a {
+    color: #fff;
+    text-decoration: none;
+    background: linear-gradient(90deg, #fff, #149ddd, #0d6efd);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.4s ease;
+}
+
+.mobileTitle a:hover {
+    background-position: right center;
+    letter-spacing: 0.5px;
+}
+
+
+
+/* === Responsive Media Queries === */
+/* Desktop view */
+@media screen and (min-width: 1024px) {
+    /* Hide mobile elements on desktop */
+    .mobileHeader, .mobileNav, .mobileNavOverlay {
+        display: none;
+    }
+}
+
+/* Mobile/Tablet view */
+@media screen and (max-width: 1023px) {
+    /* Hide desktop sidebar on mobile/tablet */
+    .header {
+        display: none;
+    }
+    
+}
+
+/* Small phones - further optimize layout */
+@media screen and (max-width: 480px) {
+  
+    
+    .mobileTitle {
+        font-size: 18px;
+    }
+    
+    .mobileLogoImg {
+        width: 38px !important;
+        height: 38px !important;
+    }
+
+}
+/* Animation Keyframes */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from { 
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to { 
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    from { 
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to { 
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from { 
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to { 
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes profileEntrance {
+    0% {
+        opacity: 0;
+        transform: translateY(40px) scale(0.8);
+    }
+    60% {
+        opacity: 1;
+        transform: translateY(-15px) scale(1.05);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes slideInNavItem {
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes gradientFlow {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 0.5;
+    }
+    50% {
+        transform: scale(1.05);
+        opacity: 0.2;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0.5;
+    }
+}
+
+/* Active state styles for nav links */
+.navLink.active {
+    background: rgba(20, 157, 221, 0.1);
+    color: #fff;
+    font-weight: 700;
+}
+
+.navLink.active i {
+    color: #0d6efd;
+}
