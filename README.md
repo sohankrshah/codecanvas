@@ -1,36 +1,111 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 CODECANVAS – Personal Portfolio
 
-## Getting Started
+A modern, responsive portfolio built with **Next.js**, **TypeScript**, and **CSS**, designed to showcase your projects, skills, and professional identity. The homepage features a sleek dark-themed layout with glowing accents, smooth transitions, and a minimalist navigation bar.
 
-First, run the development server:
+🔗 **Live Demo:** [View Deployed Site](https://your-deployment-link.com)
+
+---
+
+## ✨ Features
+
+- **Responsive Design** – Mobile-first layout adapts to all screen sizes
+- **Project Gallery** – Filterable, animated showcase of your work
+- **Type-safe Development** – Built with TypeScript for reliability
+- **Modern UI/UX** – Clean design using ShadCN UI and Lucide icons
+- **Fast & Optimized** – Smooth animations and quick load times
+
+---
+
+## 🛠️ Tech Stack
+
+| Category     | Tech Used                     |
+|--------------|-------------------------------|
+| Framework    | [Next.js 14+](https://nextjs.org/) |
+| Language     | [TypeScript](https://www.typescriptlang.org/) |
+| Styling      | CSS Modules, ShadCN UI        |
+| Icons        | [Lucide React](https://lucide.dev/) |
+| Deployment   | [Vercel](https://vercel.com/) |
+
+---
+
+## 📂 Project Structure
+
+codecanvas/ ├── public/ │ └── assets/ │ ├── img/ # Static images │ └── documents/ # Resume and downloads ├── src/ │ ├── app/ │ │ ├── home/ # Landing page │ │ │ ├── projects/ # Project listings │ │ │ └── page.tsx # Home page entry │ │ ├── about/ # About section │ │ ├── contact/ # Contact form │ │ ├── footer/ # Footer layout │ │ ├── layout.tsx # Root layout │ │ └── globals.css # Global styles │ ├── components/ # Reusable UI components │ ├── TS/ │ │ ├── context/ # Context providers │ │ └── types/ # TypeScript interfaces ├── .gitignore ├── eslint.config.mjs ├── LICENSE ├── next.config.ts ├── package.json ├── tsconfig.json └── README.md
+
+Code
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js 18+
+- npm, yarn, or pnpm
+
+### Installation
 
 ```bash
+git clone https://github.com/sohankrshah/codecanvas.git
+cd codecanvas
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+Visit http://localhost:3000 to view locally.
 ```
+📝 Adding New Projects
+Edit src/contents/project.ts and append a new object to the projects array:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+📦 Production Build
+bash
+npm run build
+npm start
+🚢 Deployment
+Vercel (Recommended)
+Push to GitHub
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Import repo on Vercel
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Click “Deploy”
 
-## Learn More
+📄 Environment Variables
+Create .env.local:
 
-To learn more about Next.js, take a look at the following resources:
+env
+NEXT_PUBLIC_SITE_URL=https://yourwebsite.com
+NEXT_PUBLIC_GITHUB_USERNAME=sohankrshah
+🧪 Scripts
+npm run dev – Start dev server
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+npm run build – Build for production
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+npm start – Run production server
 
-## Deploy on Vercel
+npm run lint – Lint code
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+npm run type-check – TypeScript check
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+🐛 Known Issues
+None currently. Please report bugs via GitHub Issues.
+
+🤝 Contributing
+Fork the repo
+
+Create a branch (git checkout -b feature/YourFeature)
+
+Commit and push
+
+Open a Pull Request
+
+📜 License
+MIT License – see LICENSE
+
+👤 Author
+Sohan Kumar Shah
+
+GitHub: @sohankrshah
+
+LinkedIn: @sohankrshah
+
+Portfolio: codecanvas.dev
+
+⭐ If you like this project, give it a star!
