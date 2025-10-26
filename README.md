@@ -102,4 +102,4 @@ MIT License — see LICENSE.
 
 - GitHub: https://github.com/sohankrshah
 - LinkedIn: https://linkedin.com/in/sohankrshah
-- Portfolio: https://codecanvas.dev
+- Portfolio: https://codecanvas-six.vercel.app
