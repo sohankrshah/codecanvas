@@ -22,17 +22,11 @@ A modern, responsive portfolio built with **Next.js**, **TypeScript**, and **CSS
 |--------------|-------------------------------|
 | Framework    | [Next.js 14+](https://nextjs.org/) |
 | Language     | [TypeScript](https://www.typescriptlang.org/) |
-| Styling      | CSS Modules, ShadCN UI        |
+| Styling      | CSS Modules      |
 | Icons        | [Lucide React](https://lucide.dev/) |
 | Deployment   | [Vercel](https://vercel.com/) |
 
----
 
-## 📂 Project Structure
-
-codecanvas/ ├── public/ │ └── assets/ │ ├── img/ # Static images │ └── documents/ # Resume and downloads ├── src/ │ ├── app/ │ │ ├── home/ # Landing page │ │ │ ├── projects/ # Project listings │ │ │ └── page.tsx # Home page entry │ │ ├── about/ # About section │ │ ├── contact/ # Contact form │ │ ├── footer/ # Footer layout │ │ ├── layout.tsx # Root layout │ │ └── globals.css # Global styles │ ├── components/ # Reusable UI components │ ├── TS/ │ │ ├── context/ # Context providers │ │ └── types/ # TypeScript interfaces ├── .gitignore ├── eslint.config.mjs ├── LICENSE ├── next.config.ts ├── package.json ├── tsconfig.json └── README.md
-
-Code
 
 ---
 
