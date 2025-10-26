@@ -50,18 +50,19 @@ Visit http://localhost:3000 to view locally.
 Edit src/contents/project.ts and append a new object to the projects array:
 
 📦 Production Build
-bash
+```bash
 npm run build
 npm start
 🚢 Deployment
 Vercel (Recommended)
 Push to GitHub
-
+```
 Import repo on Vercel
 
 Click “Deploy”
 
 📄 Environment Variables
+```bash
 Create .env.local:
 
 env
@@ -77,7 +78,7 @@ npm start – Run production server
 npm run lint – Lint code
 
 npm run type-check – TypeScript check
-
+```
 🐛 Known Issues
 None currently. Please report bugs via GitHub Issues.
 
