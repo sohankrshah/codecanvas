@@ -79,28 +79,27 @@ npm run lint – Lint code
 
 npm run type-check – TypeScript check
 ```
-🐛 Known Issues
+### 🐛 Known Issues
 None currently. Please report bugs via GitHub Issues.
 
-🤝 Contributing
-Fork the repo
+---
 
-Create a branch (git checkout -b feature/YourFeature)
+### 🤝 Contributing
+1. Fork the repo
+2. Create feature branch: `git checkout -b feature/YourFeature`
+3. Commit & push
+4. Open a Pull Request ✅
 
-Commit and push
+---
 
-Open a Pull Request
+### 📜 License
+MIT License — see LICENSE.
 
-📜 License
-MIT License – see LICENSE
+---
 
-👤 Author
-Sohan Kumar Shah
+### 👤 Author
+**Sohan Kumar Shah**
 
-GitHub: @sohankrshah
-
-LinkedIn: @sohankrshah
-
-Portfolio: codecanvas.dev
-
-⭐ If you like this project, give it a star!
+- GitHub: https://github.com/sohankrshah
+- LinkedIn: https://linkedin.com/in/sohankrshah
+- Portfolio: https://codecanvas.dev
