@@ -2,7 +2,7 @@
 
 A modern, responsive portfolio built with **Next.js**, **TypeScript**, and **CSS**, designed to showcase your projects, skills, and professional identity. The homepage features a sleek dark-themed layout with glowing accents, smooth transitions, and a minimalist navigation bar.
 
-🔗 **Live Demo:** [View Deployed Site](https://your-deployment-link.com)
+🔗 **Live Demo:** [View Deployed Site](https://codecanvas-six.vercel.app)
 
 ---
 
