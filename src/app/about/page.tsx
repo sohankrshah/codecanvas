@@ -6,7 +6,7 @@ import type { TimelineItemProps, SkillCategoryProps, InterestCardProps } from '@
 
 // ==================== Sub-Components ====================
 
-function TimelineItem({ title, period, institution, institutionDetail }: TimelineItemProps) {
+function TimelineItem({ title, period, institution, institutionalLocation, institutionDetail }: TimelineItemProps) {
   return (
     <div className={styles.timelineItem}>
       <div className={styles.timelineBadge} />
@@ -17,6 +17,9 @@ function TimelineItem({ title, period, institution, institutionDetail }: Timelin
           <span>{period}</span>
         </div>
         <p className={styles.institution}>{institution}</p>
+         {institutionalLocation && (
+          <p className={styles.institutionLocation}>{institutionalLocation}</p>
+        )}
         {institutionDetail && (
           <p className={styles.institutionDetail}>{institutionDetail}</p>
         )}
@@ -61,18 +64,21 @@ export default function AboutSection() {
     {
       title: 'Bachelor in Computer Science Engineering',
       period: '2022 - 2026',
-      institution: 'Kalinga Institute of Industrial Technology, India',
+      institution: 'Kalinga Institute of Industrial Technology',
+      institutionalLocation: 'Bhubaneswar, Odish, India(751024)'
     },
     {
       title: '12th-PCM',
       period: '2020 - 2022',
-      institution: 'DAV College, Biratnagar, Nepal',
+      institution: ' DSDT DAV KEDIA VISHWABHARTI',
+      institutionalLocation:'Biratnagar, Nepal',
       institutionDetail: 'CBSE Board',
     },
     {
       title: '10th Class',
       period: '2020 Pass-out',
-      institution: 'Janak Memorial Secondary Boarding School, Gramthan-2 Jhorahat, Biratnagar, Nepal',
+      institution: 'Janak Memorial Secondary Boarding School',
+      institutionalLocation: ' Gramthan-2 Jhorahat, Biratnagar, Nepal',
       institutionDetail: 'NEB Board',
     },
   ];

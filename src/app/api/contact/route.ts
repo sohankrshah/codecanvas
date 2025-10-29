@@ -1,7 +1,12 @@
 import { NextResponse } from "next/server";
 import { Resend } from 'resend';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+// Initialize Resend only if API key exists
+let resend: Resend | null = null;
+
+if (process.env.RESEND_API_KEY) {
+    resend = new Resend(process.env.RESEND_API_KEY);
+}
 
 interface ContactRequestBody {
     name: string;
@@ -12,6 +17,12 @@ interface ContactRequestBody {
 
 export async function POST(request: Request) {
     try {
+        // DEBUG: Check environment variables (REMOVE AFTER TESTING)
+        console.log('🔍 DEBUG INFO:');
+        console.log('RESEND_API_KEY exists:', !!process.env.RESEND_API_KEY);
+        console.log('YOUR_EMAIL exists:', !!process.env.YOUR_EMAIL);
+        console.log('RESEND_API_KEY starts with:', process.env.RESEND_API_KEY?.substring(0, 5));
+        
         // Parse the request body
         const body = await request.json() as ContactRequestBody;
 
@@ -34,9 +45,20 @@ export async function POST(request: Request) {
 
         // Check if environment variables are set
         if (!process.env.RESEND_API_KEY || !process.env.YOUR_EMAIL) {
-            console.error("Missing environment variables: RESEND_API_KEY or YOUR_EMAIL");
+            console.error("❌ Missing environment variables");
+            console.error("RESEND_API_KEY exists:", !!process.env.RESEND_API_KEY);
+            console.error("YOUR_EMAIL exists:", !!process.env.YOUR_EMAIL);
             return NextResponse.json(
-                { message: "Server configuration error" },
+                { message: "Server configuration error. Please contact the administrator." },
+                { status: 500 }
+            );
+        }
+
+        // Check if Resend is initialized
+        if (!resend) {
+            console.error("❌ Resend client not initialized");
+            return NextResponse.json(
+                { message: "Email service not configured" },
                 { status: 500 }
             );
         }
@@ -70,11 +92,11 @@ export async function POST(request: Request) {
                             background: #ffffff;
                             border-radius: 20px;
                             overflow: hidden;
-                            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+                            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
                         }
                         .header { 
                             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-                            padding: 30px 20px;
+                            padding: 50px 30px;
                             text-align: center;
                             position: relative;
                             overflow: hidden;
@@ -302,7 +324,8 @@ export async function POST(request: Request) {
         });
 
         if (error) {
-            console.error("Resend API error:", error);
+            console.error("❌ Resend API error details:");
+            console.error("Error object:", JSON.stringify(error, null, 2));
             return NextResponse.json(
                 { message: "Failed to send email. Please try again later." },
                 { status: 500 }
@@ -320,7 +343,10 @@ export async function POST(request: Request) {
         );
 
     } catch (error) {
-        console.error("❌ Error processing contact form:", error);
+        console.error("❌ Error processing contact form:");
+        console.error("Error type:", error instanceof Error ? 'Error object' : typeof error);
+        console.error("Error message:", error instanceof Error ? error.message : String(error));
+        console.error("Full error:", error);
         
         const errorMessage = error instanceof Error 
             ? error.message 

@@ -88,6 +88,7 @@ export interface TimelineItemProps {
   title: string;
   period: string;
   institution: string;
+  institutionalLocation?: string;
   institutionDetail?: string;
 }
 
