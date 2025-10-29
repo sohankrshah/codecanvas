@@ -243,8 +243,20 @@
   border-color: #4cc9f0;
 }
 
+.databaseCategory {
+  border-color: #9d4edd;
+}
+
+.mlCategory {
+  border-color: #ff006e;
+}
+
 .dataCategory {
   border-color: #4deeea;
+}
+
+.dashboardCategory {
+  border-color: #06ffa5;
 }
 
 .frameworksCategory {
@@ -253,6 +265,10 @@
 
 .toolsCategory {
   border-color: #f000ff;
+}
+
+.apiCategory {
+  border-color: #ffd60a;
 }
 
 .skillCategory h4 {
@@ -310,11 +326,25 @@
   background: linear-gradient(135deg, #4cc9f0, #3a86ff);
   color: #fff;
 }
+.databaseCategory .skillTag:hover {
+  background: linear-gradient(135deg, #9d4edd, #7209b7);
+  color: #fff;
+}
+
+.mlCategory .skillTag:hover {
+  background: linear-gradient(135deg, #ff006e, #d00060);
+  color: #fff;
+}
 
 .dataCategory .skillTag:hover {
   background: linear-gradient(135deg, #4deeea, #0fe3c2);
   color: #fff;
 }
+.dashboardCategory .skillTag:hover {
+  background: linear-gradient(135deg, #06ffa5, #04d98b);
+  color: #fff;
+}
+
 
 .frameworksCategory .skillTag:hover {
   background: linear-gradient(135deg, #74ee15, #4cbe09);
@@ -323,6 +353,10 @@
 
 .toolsCategory .skillTag:hover {
   background: linear-gradient(135deg, #f000ff, #8a00c2);
+  color: #fff;
+}
+.apiCategory .skillTag:hover {
+  background: linear-gradient(135deg, #ffd60a, #fca311);
   color: #fff;
 }
 
