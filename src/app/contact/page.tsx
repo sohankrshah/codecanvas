@@ -39,14 +39,33 @@ const ContactPage = () => {
     setSubmitStatus('submitting');
 
     try {
-      
-      await new Promise(resolve => setTimeout(resolve, 1500));
-      
+      // Make actual API call to your backend
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+        }),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.message || 'Failed to send message');
+      }
+
+      // Success
       setSubmitStatus('success');
       setFormData(INITIAL_FORM_DATA);
       
       // Reset success message after 5 seconds
       setTimeout(() => setSubmitStatus('idle'), 5000);
+      
     } catch (error) {
       console.error('Error sending message:', error);
       setSubmitStatus('error');
