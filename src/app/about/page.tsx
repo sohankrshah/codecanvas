@@ -168,6 +168,7 @@ export default function AboutSection() {
         '🐙 GitHub',
         '🌐 Streamlit',
         '☁️ AWS',
+        '🔁 CI/CD Pipelines',
       ],
     },
     {
