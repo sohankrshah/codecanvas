@@ -17,7 +17,7 @@ function TimelineItem({ title, period, institution, institutionalLocation, insti
           <span>{period}</span>
         </div>
         <p className={styles.institution}>{institution}</p>
-         {institutionalLocation && (
+        {institutionalLocation && (
           <p className={styles.institutionLocation}>{institutionalLocation}</p>
         )}
         {institutionDetail && (
@@ -65,20 +65,20 @@ export default function AboutSection() {
       title: 'Bachelor in Computer Science Engineering',
       period: '2022 - 2026',
       institution: 'Kalinga Institute of Industrial Technology',
-      institutionalLocation: 'Bhubaneswar, Odish, India(751024)'
+      institutionalLocation: 'Bhubaneswar, Odisha, India (751024)'
     },
     {
       title: '12th-PCM',
       period: '2020 - 2022',
-      institution: ' DSDT DAV KEDIA VISHWABHARTI',
-      institutionalLocation:'Biratnagar, Nepal',
+      institution: 'DSDT DAV KEDIA VISHWABHARTI',
+      institutionalLocation: 'Biratnagar, Nepal',
       institutionDetail: 'CBSE Board',
     },
     {
       title: '10th Class',
       period: '2020 Pass-out',
       institution: 'Janak Memorial Secondary Boarding School',
-      institutionalLocation: ' Gramthan-2 Jhorahat, Biratnagar, Nepal',
+      institutionalLocation: 'Gramthan-2 Jhorahat, Biratnagar, Nepal',
       institutionDetail: 'NEB Board',
     },
   ];
@@ -89,18 +89,54 @@ export default function AboutSection() {
       title: 'Programming Languages',
       emoji: '💻',
       categoryClass: 'programmingCategory',
-      skills: ['🐍 Python', '☕ Java', '📄 HTML', '🎨 CSS'],
+      skills: ['🐍 Python', '☕ Java'],
     },
     {
-      title: 'Data Science & Analytics',
+      title: 'Databases',
+      emoji: '🗄️',
+      categoryClass: 'databaseCategory',
+      skills: ['🗄️ MySQL', '🐘 PostgreSQL'],
+    },
+    {
+      title: 'Machine Learning & Agentic AI',
+      emoji: '🧠',
+      categoryClass: 'mlCategory',
+      skills: [
+        '📊 Supervised Learning',
+        '🔍 Classification & Regression',
+        '🧩 Clustering',
+        '📈 Predictive Modeling',
+        '🧠 Prompt Engineering',
+        '🛠️ CrewAI',
+        '🧩 Phi (Microsoft)',
+      ],
+    },
+    {
+      title: 'Data Analysis & Visualization',
       emoji: '📊',
       categoryClass: 'dataCategory',
       skills: [
+        '🧹 Data Cleaning',
         '🔍 EDA',
         '⚙️ Feature Engineering',
-        '🧪 Hypothesis Testing',
-        '📈 Visualization',
-        '🧮 Classification/Regression',
+        '🧮 SQL Querying',
+        '📉 Matplotlib',
+        '🌊 Seaborn',
+        '📊 Plotly',
+        '📈 Power BI',
+        '📑 Excel',
+      ],
+    },
+    {
+      title: 'Dashboarding & Data Storytelling',
+      emoji: '📈',
+      categoryClass: 'dashboardCategory',
+      skills: [
+        '📊 Streamlit Dashboards',
+        '📈 Power BI Reports',
+        '📉 Plotly Dash',
+        '📑 Excel Dashboards',
+        '🧠 Insight Communication',
       ],
     },
     {
@@ -112,6 +148,7 @@ export default function AboutSection() {
         '🔢 Numpy',
         '📉 Matplotlib',
         '🌊 Seaborn',
+        '📊 Plotly',
         '🚀 XGBoost',
         '🔥 PyTorch',
         '🧠 TensorFlow',
@@ -120,20 +157,29 @@ export default function AboutSection() {
       ],
     },
     {
-      title: 'Tools & Technologies',
+      title: 'Tools & IDEs',
       emoji: '🛠️',
       categoryClass: 'toolsCategory',
       skills: [
+        '📓 Jupyter Notebook',
+        '🧪 Google Colab',
+        '👨‍💻 VS Code',
         '📄 Git',
         '🐙 GitHub',
-        '👨‍💻 VS Code',
-        '📓 Jupyter',
-        '🧪 Colab',
-        '🗄️ MySQL',
-        '📊 Power BI',
-        '📑 Ms Excel',
+        '🌐 Streamlit',
         '☁️ AWS',
-        '🐧 Linux',
+      ],
+    },
+    {
+      title: 'APIs & Integrations',
+      emoji: '🔗',
+      categoryClass: 'apiCategory',
+      skills: [
+        '🧠 OpenAI API',
+        '🔮 Gemini API',
+        '🧩 Phi (Microsoft)',
+        '💹 yFinance',
+        '🔍 SerpAPI',
       ],
     },
   ];
@@ -165,10 +211,37 @@ export default function AboutSection() {
       title: 'Cloud Computing',
       description: 'Utilizing cloud platforms for scalable solutions',
     },
+  ];
+
+  const projectGoals: InterestCardProps[] = [
     {
       icon: '📈',
-      title: 'Data Visualization',
-      description: 'Presenting data in a visually appealing manner',
+      title: 'Current Project Goal',
+      description:
+        'Building an agentic AI-powered financial recommendation system for the Indian stock market using yFinance data. Focused on multi-agent orchestration, real-time insights, and scalable architecture.',
+    },
+  ];
+
+  const internshipFocus: InterestCardProps[] = [
+    {
+      icon: '🧠',
+      title: 'AI/ML Engineer Intern',
+      description: 'Seeking roles focused on agentic systems, LLM orchestration, and model development.',
+    },
+    {
+      icon: '📊',
+      title: 'Data Scientist Intern',
+      description: 'Interested in roles involving EDA, predictive modeling, and dashboarding.',
+    },
+    {
+      icon: '📈',
+      title: 'Data Analyst Intern',
+      description: 'Looking for opportunities in SQL querying, Power BI, and insight communication.',
+    },
+    {
+      icon: '🌐',
+      title: 'Full-Stack Data App Intern',
+      description: 'Open to building modular data-driven apps using Streamlit, APIs, and Python.',
     },
   ];
 
@@ -229,6 +302,30 @@ export default function AboutSection() {
           <div className={styles.interestsGrid}>
             {interests.map((interest, index) => (
               <InterestCard key={`interest-${index}`} {...interest} />
+            ))}
+          </div>
+        </div>
+
+        {/* Project Goals Section */}
+        <div className={styles.interestsSection}>
+          <div className={styles.sectionHeading}>
+            <h3>Current Focus</h3>
+          </div>
+          <div className={styles.interestsGrid}>
+            {projectGoals.map((goal, index) => (
+              <InterestCard key={`goal-${index}`} {...goal} />
+            ))}
+          </div>
+        </div>
+
+        {/* Internship Focus Section */}
+        <div className={styles.interestsSection}>
+          <div className={styles.sectionHeading}>
+            <h3>Internship Focus</h3>
+          </div>
+          <div className={styles.interestsGrid}>
+            {internshipFocus.map((focus, index) => (
+              <InterestCard key={`focus-${index}`} {...focus} />
             ))}
           </div>
         </div>
