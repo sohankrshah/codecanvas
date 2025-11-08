@@ -42,7 +42,7 @@ export const projects: Project[] = [
   title: "Bank Customer Churn Dashboard",
   description:
     "Developed an interactive Power BI dashboard to analyze customer churn patterns using metrics like tenure, balance, credit score, and product usage.",
-  technologies: ["Power BI", "DAX", "Data Modeling", "Visualization"],
+  technologies: ["Power BI", "Visualization"],
   githubUrl: "https://github.com/sohankrshah/Power-BI-Dashboard", 
   icon: BarChart2,
   category: "Data Visualization",
