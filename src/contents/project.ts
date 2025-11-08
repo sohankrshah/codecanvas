@@ -1,6 +1,5 @@
 import { Project } from "@/types";
 import {
-  LineChart,
   Code,
   Activity,
   Database,
