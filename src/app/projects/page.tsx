@@ -85,17 +85,6 @@ export default function ProjectSection() {
                     <span>GitHub</span>
                   </a>
 
-                  {project.slug && (
-                    <Link
-                      href={`/projects/${project.slug}`}
-                      className={styles.projectLink}
-                      aria-label={`View detailed post for ${project.title}`}
-                    >
-                      <ExternalLink size={18} />
-                      <span>View Post</span>
-                    </Link>
-                  )}
-
                   {project.demoUrl && (
                     <a
                       href={project.demoUrl}
