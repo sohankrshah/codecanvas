@@ -20,7 +20,7 @@ export const projects: Project[] = [
       "Developed an AI trip planner using the OpenAI API via Crew Agent, streamlining itinerary generation.",
     technologies: ["Python", "Streamlit", "Crew Agent", "OpenAI"],
     githubUrl: "https://github.com/sohankrshah/AI-AGENT",
-    demoUrl: "https://ai-travel-agent-demo.vercel.app",
+    demoUrl: "https://tripplannerai.streamlit.app",
     icon: Plane,
     category: "AI",
     slug: "ai-travel-agent",
