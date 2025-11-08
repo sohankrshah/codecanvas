@@ -37,5 +37,17 @@ export const projects: Project[] = [
   category: "AGENTIC AI",
   slug: "ai-finance-agent",
   },
+  {
+  id: 3,
+  title: "Bank Customer Churn Dashboard",
+  description:
+    "Developed an interactive Power BI dashboard to analyze customer churn patterns using metrics like tenure, balance, credit score, and product usage.",
+  technologies: ["Power BI", "DAX", "Data Modeling", "Visualization"],
+  githubUrl: "https://github.com/sohankrshah/Power-BI-Dashboard", 
+  icon: BarChart,
+  category: "Data Visualization",
+  slug: "bank-churn-dashboard",
+},
+
 
 ];
