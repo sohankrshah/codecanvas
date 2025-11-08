@@ -22,7 +22,7 @@ export const projects: Project[] = [
     githubUrl: "https://github.com/sohankrshah/AI-AGENT",
     demoUrl: "https://tripplannerai.streamlit.app",
     icon: Plane,
-    category: "AI",
+    category: "AGENTIC AI",
     slug: "ai-travel-agent",
   },
   {
