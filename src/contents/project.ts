@@ -25,4 +25,17 @@ export const projects: Project[] = [
     category: "AI",
     slug: "ai-travel-agent",
   },
+  {
+  id: 2,
+  title: "AI Finance Agent",
+  description:
+    "Built a modular AI agent using CrewAI and GPT-4 to fetch real-time fundamental and technical stock data via Yahoo Finance.",
+  technologies: ["Python", "Streamlit", "CrewAI", "GPT-4", "Yahoo Finance"],
+  githubUrl: "https://github.com/sohankrshah/Agentic_finance",
+  demoUrl: "https://agentic-finance-mxr5.onrender.com",
+  icon: Stock, 
+  category: "AGENTIC AI",
+  slug: "ai-finance-agent",
+  },
+
 ];
