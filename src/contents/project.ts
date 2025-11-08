@@ -1,5 +1,6 @@
 import { Project } from "@/types";
 import {
+  LineChart,
   Code,
   Activity,
   Database,
@@ -33,7 +34,7 @@ export const projects: Project[] = [
   technologies: ["Python", "Streamlit", "CrewAI", "GPT-4", "Yahoo Finance"],
   githubUrl: "https://github.com/sohankrshah/Agentic_finance",
   demoUrl: "https://agentic-finance-mxr5.onrender.com",
-  icon: Stock, 
+  icon: LineChart, 
   category: "AGENTIC AI",
   slug: "ai-finance-agent",
   },
